@@ -39,5 +39,11 @@
                 Style="{StaticResource CustomButton}">
             Control Template 테스트!
         </Button>
+
+        <ComboBox Grid.Row="1"
+                   Margin="10"
+                   FontSize="30"
+                   ItemsSource="{Binding Items}">
+        </ComboBox>
     </Grid>
 </Window>
