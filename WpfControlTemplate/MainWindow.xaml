@@ -44,13 +44,27 @@
                    Margin="10"
                    FontSize="30"
                    ItemsSource="{Binding Items}">
-            <ComboBox.ItemTemplate>
+            <ComboBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ComboBoxItem}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <TextBlock Text="{Binding Value}"
+                                           Foreground="{Binding Brush}">
+                                </TextBlock>
+                            </ControlTemplate>
+                        </Setter.Value>
+
+                    </Setter>
+                </Style>
+            </ComboBox.ItemContainerStyle>
+            <!--<ComboBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Value}"
                                Foreground="{Binding Brush}">
                     </TextBlock>
                 </DataTemplate>
-            </ComboBox.ItemTemplate>
+            </ComboBox.ItemTemplate>-->
         </ComboBox>
     </Grid>
 </Window>
