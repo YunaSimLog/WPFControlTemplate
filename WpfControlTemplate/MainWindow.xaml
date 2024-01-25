@@ -17,7 +17,19 @@
                 FontSize="20"
                 IsEnabled="False"
                 Background="Blue">
-            Control Template 테스트!            
+            Control Template 테스트!
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="Blue"
+                            BorderThickness="5"
+                            CornerRadius="10"
+                            Background="SkyBlue">
+                    <ContentPresenter HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
         </Button>
     </Grid>
 </Window>
