@@ -6,6 +6,24 @@
         xmlns:local="clr-namespace:WpfControlTemplate"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border BorderBrush="Blue"
+                                BorderThickness="5"
+                                CornerRadius="10"
+                                Background="SkyBlue">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -18,18 +36,6 @@
                 IsEnabled="False"
                 Background="Blue">
             Control Template 테스트!
-            <Button.Template>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border BorderBrush="Blue"
-                            BorderThickness="5"
-                            CornerRadius="10"
-                            Background="SkyBlue">
-                    <ContentPresenter HorizontalAlignment="Center"
-                                      VerticalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-
         </Button>
     </Grid>
 </Window>
